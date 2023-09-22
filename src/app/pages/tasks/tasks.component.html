@@ -1,0 +1,13 @@
+<div class="content-block dx-card responsive-paddings">
+  <h2>Agenda</h2>
+  <p>Aquí podrá encontrar cumpleaños del mes y agendar sus compromisos</p>
+  <dx-scheduler
+  [views]="['day', 'week', 'month']"
+  currentView="month"
+  id="scheduler"
+  [dataSource]="appointments"
+  textExpr="title"
+  allDayExpr="dayLong"
+  recurrenceRuleExpr="recurrence">
+  </dx-scheduler>
+</div>

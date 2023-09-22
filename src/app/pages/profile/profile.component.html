@@ -1,0 +1,46 @@
+<h2 class="content-block">Graphs</h2>
+
+<div class="content-block dx-card responsive-paddings">
+  <div class="graphs-div">
+    
+    <dx-pie-chart class="half-screen-graphs"
+    title="Número de empleados por puesto"
+    [dataSource]="positionsDataset"
+    type="doughnut">
+    <dxi-series
+    argumentField="position"
+    valueField="amount">
+    <dxo-label
+    [visible]="true"
+    position="columns">
+    <dxo-connector [visible]="true"></dxo-connector>
+    </dxo-label>
+    
+  </dxi-series>
+  <dxo-tooltip
+  [enabled]="true">
+</dxo-tooltip>
+</dx-pie-chart>
+
+
+<dx-pie-chart class="half-screen-graphs"
+  title="Número de empleados por lugar de residencia"
+  [dataSource]="locationsDataset"
+  type="doughnut">
+  <dxi-series
+  argumentField="location"
+  valueField="amount">
+  <dxo-label
+    [visible]="true"
+    position="columns">
+    <dxo-connector [visible]="true"></dxo-connector>
+  </dxo-label>
+
+  </dxi-series>
+  <dxo-tooltip
+  [enabled]="true">
+  </dxo-tooltip>
+  </dx-pie-chart>
+</div>
+  
+</div>
